@@ -1,5 +1,17 @@
 import React from "react";
 import "./App.css";
+import axios from 'axios'; 
+
+
+axios
+.get('https://api.nasa.gov/#apod')
+.then(res => {
+  console.log(res)
+})
+.catch(err => {
+  console.log(err)
+})
+
 
 function App() {
   return (
